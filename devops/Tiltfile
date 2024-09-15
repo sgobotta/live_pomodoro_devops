@@ -1,0 +1,4 @@
+docker_compose('docker-compose.yml', env_file='../.env')
+dc_resource('postgres', labels=["storage"], auto_init=True)
+dc_resource('redis', labels=["storage"], auto_init=True)
+dc_resource('pgadmin', labels=["admin"], auto_init=True)
